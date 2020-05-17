@@ -42,7 +42,9 @@ document.getElementById("saveSettings").addEventListener("click", function(){
                 chrome.runtime.sendMessage({type: 'update',  update: 1}, function(response) {
                 });
                 username = document.getElementById("username").value;
-                document.getElementById('webHookInfo').innerHTML = "";
+				document.getElementById('webHookInfo').innerHTML = "";
+				chrome.runtime.sendMessage({type: 'save',  update: 1}, function(response) {
+				});	
             });
         } else {
             chrome.storage.sync.set({ webHookUrl: document.getElementById("webHookUrl").value, webHookName: undefined }, function() {

@@ -40,6 +40,16 @@ chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
 		  type: 'basic'
 	  };
 	  chrome.notifications.create('', options);};
+	if (request.type == 'save') {
+		postToWebhook("<@" + username + ">, You just saved your settings on the extension.");
+		var options =
+		{
+			title: 'CSGOEmpire Deposit',
+			message: 'You hit save on the extension.',
+			iconUrl: 'icons/icon_1000.png',
+			type: 'basic'
+		};
+	  chrome.notifications.create('', options);};
 });
 
 function refreshVars() {
