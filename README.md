@@ -3,7 +3,7 @@ The github of the Auto Deposit Notifier chrome extension. It will click on the "
 Contact Toalen#9279 for support.
 
 # How to install :
-Go to chrome://extensions/, enable dev mode (top right corner), and click "Load unpacked extension" (top left corner), select the Auto-Deposit-Notifier folder (has to be unzipped), and you're good
+Go to chrome://extensions/, enable dev mode (top right corner), and click "Load unpacked" (top left corner), select the Auto-Deposit-Notifier folder (has to be unzipped), and you're good
 
 # How to use :
 First, create a webhook in your discord server (you need to be an admin). Go to server settings of your choice,
