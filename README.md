@@ -10,6 +10,8 @@ You'll also want to put your Discord User ID, so the bot mention you. the user i
 And that's it ! you're good to go :)
 
 # Changelogs
+- Version 2.5.0
+  Auto claims rain
 - Version 2.4.0
   Sends a notification / discord message when pressing save. useful for tests
 - Version 2.2.0
