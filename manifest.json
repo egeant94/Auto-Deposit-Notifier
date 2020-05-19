@@ -28,5 +28,6 @@
 		"scripts": ["background.js"],
 		"persistent": false
 	  },
-	 "permissions": ["notifications", "storage", "https://discordapp.com/api/"]
+	 "permissions": ["notifications", "storage", "https://discordapp.com/api/"],
+	 "homepage_url": "https://github.com/egeant94/Auto-Deposit-Notifier"
 }
