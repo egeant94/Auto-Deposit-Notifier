@@ -32,8 +32,8 @@ async function imready() //function that presses the Im ready button if it exist
 			pressok(); //press ok on this pop up if it exists
 			await sleep(58000); //wait 58 seconds before continuing the script, to avoid spamming "I'm ready" button
 		}
-		if(buttonR[i].innerText.indexOf('Claim FREE Coins') > -1) {
-			buttonR[i].click();
+		if(btn[i].innerText.indexOf('Claim FREE Coins') > -1) {
+			btn[i].click();
 			console.log('Success ! claimed Rain');  
 		}
 	}
