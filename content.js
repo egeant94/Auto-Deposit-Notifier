@@ -43,6 +43,7 @@ async function main()   //function that scans button every 1 sec, but wait for t
 {
 	while (1)
 	{
+		pressok();
 		await imready();  //wait for the im ready function to end
 		await sleep(1000); //wait 1 sec
 	}
