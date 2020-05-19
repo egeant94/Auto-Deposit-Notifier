@@ -13,7 +13,8 @@ To get it, you have to enable DEV mode on discord, user settings, Appearance and
 That's it ! you're good to go :)
 
 # Changelogs
-
+- Version 2.6.0
+  Scripts clicks on every "ok" button he finds every 1 sec. Goal is to avoid the annoying "Deposit Status" pop up
 - Version 2.5.2
   Sends the notification before clicking on the buttons, first option of the rightclick on the extension leads to the github
 - Version 2.5.1
