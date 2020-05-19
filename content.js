@@ -24,10 +24,10 @@ async function imready() //function that presses the Im ready button if it exist
 		if(btn[i].innerText.indexOf('Yes, I\'m Ready') > -1)  // If the button text is I'm Ready, Yes, I\'m Ready
 		{
 			console.log('Accepted one trade.'); // Print accepted one trade to the console
+			chrome.runtime.sendMessage({type: 'notify',  update: 1}, function(response) {//send message to background.js, to send notification and webhook
+			});		
 			await sleep(5000); //wait 5 seconds before pressing i'm ready
 			btn[i].click(); // Click button
-			chrome.runtime.sendMessage({type: 'notify',  update: 1}, function(response) {
-			});			//send message to background.js, to send notification and webhook
 			await sleep(2000); //wait 2 sec for a potential "trade status slow" pop up
 			pressok(); //press ok on this pop up if it exists
 			await sleep(58000); //wait 58 seconds before continuing the script, to avoid spamming "I'm ready" button
