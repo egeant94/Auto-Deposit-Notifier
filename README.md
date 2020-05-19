@@ -1,6 +1,8 @@
 # Auto-Deposit-Notifier
 The github of the Auto Deposit Notifier extension.
-Install link : https://chrome.google.com/webstore/detail/auto-deposit-notifier/hmaccobjeioknmmffiphllkhhphcnlkc
+
+# How to install :
+Go to chrome://extensions/, enable dev mode (top right corner), and click "Load unpacked extension", select the Auto-Deposit-Notifier folder (has to be unzipped), and you're good
 
 # How to use :
 First, create a webhook in your discord server (you need to be an admin). Go to settings of the server of your choice,
@@ -10,6 +12,8 @@ You'll also want to put your Discord User ID, so the bot mention you. the user i
 And that's it ! you're good to go :)
 
 # Changelogs
+- Version 2.5.0
+  Auto claims rain
 - Version 2.4.0
   Sends a notification / discord message when pressing save. useful for tests
 - Version 2.2.0
