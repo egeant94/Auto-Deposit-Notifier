@@ -1,15 +1,15 @@
 # Auto-Deposit-Notifier
-The github of the Auto Deposit Notifier chrome extension. It will click on the "I'm Ready" button of csgoempire, send a discord message and claim rains. Don't have to stay on the tab, you can minimize chrome, but don't close it.
+The github of the Auto Deposit Notifier chrome extension. It will click on the "I'm Ready" button of csgoempire, send a discord message and claim rains. Don't have to stay on the tab, you can minimize chrome, but don't close it. This does not apply to rain, it's only given when the empire tab is active.
 
 # How to install :
 Go to chrome://extensions/, enable dev mode (top right corner), and click "Load unpacked extension" (top left corner), select the Auto-Deposit-Notifier folder (has to be unzipped), and you're good
 
 # How to use :
-First, create a webhook in your discord server (you need to be an admin). Go to settings of the server of your choice,
-Go to webhooks, and create one associated with the channel of your choise. It will give you an url, input that into the extension
-(left click on it).
-You'll also want to put your Discord User ID, so the bot mention you. the user id is not something like Xxxx#0000, but a string of numbers. You get it by right clicking on the user of your choice. (Copy ID button)
-And that's it ! you're good to go :)
+First, create a webhook in your discord server (you need to be an admin). Go to server settings of your choice,
+Go to webhooks, create on and copy the url, Input that into the extension (left click on it).
+You'll also want to put your Discord User ID, so the bot mention you. the user id is not something like Xxxx#0000, but a string of numbers.
+To get it, you have to enable DEV mode on discord, user settings, Appearance and scroll down. Once done, right click on the user of your choice, and click the Copy ID button.
+That's it ! you're good to go :)
 
 # Changelogs
 - Version 2.5.1
