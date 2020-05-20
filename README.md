@@ -12,7 +12,7 @@ Go to webhooks, create one and copy the url, input that into the extension (left
 
 You'll also want to put your Discord User ID, so the bot can mention you. the user id is not something like Xxxx#0000, but a string of numbers (IE: 299556639294488576).
 
-To get it, type \@your-discord-name then hit enter, the numbers after the @ are your ID.
+To get it, type \\@your-discord-name then hit enter, the numbers after the @ are your ID.
 
 That's it, you're good to go :)
 
