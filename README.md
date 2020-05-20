@@ -7,10 +7,10 @@ Go to chrome://extensions/, enable dev mode (top right corner), and click "Load 
 
 # How to use :
 First, create a webhook in your discord server (you need to be an admin). Go to server settings of your choice,
-Go to webhooks, create on and copy the url, Input that into the extension (left click on it).
-You'll also want to put your Discord User ID, so the bot mention you. the user id is not something like Xxxx#0000, but a string of numbers.
-To get it, you have to enable DEV mode on discord, user settings, Appearance and scroll down. Once done, right click on the user of your choice, and click the Copy ID button.
-That's it ! you're good to go :)
+Go to webhooks, create one and copy the url, input that into the extension (left click on it).
+You'll also want to put your Discord User ID, so the bot can mention you. the user id is not something like Xxxx#0000, but a string of numbers (IE: 299556639294488576).
+To get it, type \@your-discord-name then hit enter, the numbers after the @ are your ID.
+That's it, you're good to go :)
 
 # Changelogs
 - Version 2.6.0
