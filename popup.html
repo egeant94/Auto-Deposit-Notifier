@@ -1,146 +1,150 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <style>
-      @import url('https://fonts.googleapis.com/css?family=Montserrat:300,500,700');
 
-      body {
-        background: #2C2F33;
-        margin: 0px;
-        padding: 0px;
-        width: 400px;
-        height: 200px;
-        color: white;
-        font-family: 'montserrat', sans-serif;
-        font-weight: 300;
-        font-size: 16px;
-      }
+<head>
+  <style>
+    @import url('https://fonts.googleapis.com/css?family=Montserrat:300,500,700');
 
-      button {
-        position: relative;
-        display: block;
-        border: 0px;
-        box-shadow: 0px;
-        background: #7289DA;
-        color: white;
-        border-radius: 5px;
-        height: 40px;
-        width: 80px;
-        font-size: 16px;
-        font-weight: 500;
-        cursor: pointer;
-      }
+    body {
+      background: #2C2F33;
+      margin: 0px;
+      padding: 0px;
+      width: 400px;
+      height: 200px;
+      color: white;
+      font-family: 'montserrat', sans-serif;
+      font-weight: 300;
+      font-size: 16px;
+    }
 
-      #login p {
-        margin-right: 10px;
-      }
+    button {
+      position: relative;
+      display: block;
+      border: 0px;
+      box-shadow: 0px;
+      background: #7289DA;
+      color: white;
+      border-radius: 5px;
+      height: 40px;
+      width: 80px;
+      font-size: 16px;
+      font-weight: 500;
+      cursor: pointer;
+    }
 
-      #login.notloggedin {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-      }
+    #login p {
+      margin-right: 10px;
+    }
 
-      #login.notloggedin button {
-        width: 180px;
-        height: 50px;
-      }
+    #login.notloggedin {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
 
-      #login.loggedin {
-        position: absolute;
-        top: 15px;
-        left: 5%;
-        display: flex;
-        width: 90%;
-        height: 50px;
-        justify-content: flex-end;
-        align-items: center;
-      }
+    #login.notloggedin button {
+      width: 180px;
+      height: 50px;
+    }
 
-      #manual_login {
-        font-size: 16px;
-        width: 100%;
-        cursor: pointer;
-      }
+    #login.loggedin {
+      position: absolute;
+      top: 15px;
+      left: 5%;
+      display: flex;
+      width: 90%;
+      height: 50px;
+      justify-content: flex-end;
+      align-items: center;
+    }
 
-      #manual_login:hover {
-        text-decoration: underline;
-      }
+    #manual_login {
+      font-size: 16px;
+      width: 100%;
+      cursor: pointer;
+    }
 
-      form {
-        width: 90%;
-        margin: 20px 5% 0px 5%;
-        padding-bottom: 5%;
-        visibility: hidden;
-      }
+    #manual_login:hover {
+      text-decoration: underline;
+    }
 
-      form input {
-        background: transparent;
-        border: 1px solid #7289DA;
-        border-radius: 5px;
-        box-shadow: 0px;
-        height: 30px;
-        color: white;
-      }
+    form {
+      width: 90%;
+      margin: 20px 5% 0px 5%;
+      padding-bottom: 5%;
+      visibility: hidden;
+    }
 
-      #avatar {
-        margin-top: -20px;
-        width: 50px;
-        height: 50px;
-        border-radius: 100%;
-        float: left;
-      }
+    form input {
+      background: transparent;
+      border: 1px solid #7289DA;
+      border-radius: 5px;
+      box-shadow: 0px;
+      height: 30px;
+      color: white;
+      padding-left: 5px;
+    }
 
-      #webHookName {
-        margin: -5px 0 0 65px;
-      }
+    #avatar {
+      margin-top: -20px;
+      width: 50px;
+      height: 50px;
+      border-radius: 100%;
+      float: left;
+    }
 
-      form label, form input{
-        width: 100%;
-        margin: 5px 0px;
-      }
+    #webHookName {
+      margin: -5px 0 0 65px;
+    }
 
-      form p {
-        margin-top: 15px;
-      }
+    form label,
+    form input {
+      width: 100%;
+      margin: 5px 0px;
+    }
 
-      #saveSettings {
-        position: absolute;
-        visibility: hidden;
-        bottom: 20px;
-      }
+    form p {
+      margin-top: 15px;
+    }
 
-      .centered {
-        position: relative;
-        left: 50%;
-        transform: translateX(-50%);
-      }
+    #saveSettings {
+      position: absolute;
+      visibility: hidden;
+      bottom: 20px;
+    }
 
-      .bold {
-        font-weight: 700;
-      }
+    .centered {
+      position: relative;
+      left: 50%;
+      transform: translateX(-50%);
+    }
 
-      .form_error {
-        font-size: 12px;
-        color: rgb(255, 67, 67);
-      }
+    .bold {
+      font-weight: 700;
+    }
 
-    </style>
-  </head>
-  <body>
-    <div id="login">
-      <p id="login_status">Status: Not logged in</p>
-      <p class="centered" id="manual_login"><b>Alternative method:</b> Enter username manually</p>
-    </div>
-    <form id="settings">
-      <label for="username" id="username_label" class="bold">Discord user ID</label>
-      <input type="text" id="username" name="username">
-      <label for="webHookUrl" class="bold">Webhook URL</label>
-	  <input type="text" id="webHookUrl" name="webHookUrl">
-      <div id="webHookInfo"></div>
-    </form>
-    <button id="saveSettings" class="centered">Save</button>
-    <script src="popup.js"></script>
-  </body>
+    .form_error {
+      font-size: 12px;
+      color: rgb(255, 67, 67);
+    }
+  </style>
+</head>
+
+<body>
+  <div id="login">
+    <p id="login_status">Status: Not logged in</p>
+    <p class="centered" id="manual_login"><b>Alternative method:</b> Enter username manually</p>
+  </div>
+  <form id="settings">
+    <label for="username" id="username_label" class="bold">Discord user ID</label>
+    <input type="text" id="username" name="username" placeholder="Discord Username Here">
+    <label for="webHookUrl" class="bold">Webhook URL</label>
+    <input type="text" id="webHookUrl" name="webHookUrl" placeholder="https://discordapp.com/api/webhooks/...">
+    <div id="webHookInfo"></div>
+  </form>
+  <button id="saveSettings" class="centered">Save</button>
+  <script src="popup.js"></script>
+</body>
+
 </html>
