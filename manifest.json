@@ -2,11 +2,11 @@
 	"manifest_version" : 2,
 	"name": "Auto Deposit Notifier",
 	"description": "On csgoempire.com, detects when someone buy your item, clicks ready and send notification + discord message.",
-	"version": "2.6.0",
+	"version": "2.7.0",
 	"content_scripts": [
 		{
 		  "matches": [
-			"https://csgoempire.com/*", "https://csgoempire.gg/*"
+			"https://csgoempire.com/*", "https://csgoempire.gg/*", "https://www.rollbit.com/*"
 		  ],
 		  "js": ["content.js"]
 		}

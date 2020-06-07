@@ -54,6 +54,7 @@ chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {
     };
 });
 
+
 function refreshVars() {
     chrome.storage.sync.get('username', function (data) {
         username = data.username;
