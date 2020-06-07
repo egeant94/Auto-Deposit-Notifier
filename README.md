@@ -17,6 +17,8 @@ To get it, type \\@your-discord-name then hit enter, the numbers after the @ are
 That's it, you're good to go :)
 
 # Changelogs
+- Version 2.7.0
+  Deposit notifier now also works on rollbit.
 - Version 2.6.0
   Scripts clicks on every "ok" button he finds every 1 sec. Goal is to avoid the annoying "Deposit Status" pop up
 - Version 2.5.2
