@@ -1,6 +1,6 @@
 # Auto-Deposit-Notifier
-The github of the Auto Deposit Notifier chrome extension. It will click on the "I'm Ready" button of csgoempire, send a discord message and claim rains. Don't have to stay on the tab, you can minimize chrome, but don't close it. This does not apply to rain, it's only given when the empire tab is active (in focus).
-Contact Toalen#9279 for support.
+The github of the Auto Deposit Notifier chrome extension. It will click on the "I'm Ready" button of csgoempire, send a discord message and claim rains. Don't have to stay on the tab, you can minimize chrome, but don't close it.
+Contact Toalen#0001 for support.
 
 # How to install :
 Go to chrome://extensions/, enable dev mode (top right corner), and click "Load unpacked" (top left corner), select the Auto-Deposit-Notifier folder (has to be unzipped), and you're good
