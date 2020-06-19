@@ -29,9 +29,20 @@ chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {
     sendResponse({});
     if (request.type == 'update') {
         refreshVars();
-    }
-    if (request.type == 'notify') {
-        postToWebhook("<@" + username + ">, Send steam offer");
+	}
+    if (request.type == 'rollbit') {
+        postToWebhook("<@" + username + ">, Send steam offer (Rollbit)");
+        var options =
+        {
+            title: 'CSGOEmpire Deposit',
+            message: '10 minutes to send steam offer',
+            iconUrl: 'icons/icon_1000.png',
+            type: 'basic'
+        };
+        chrome.notifications.create('', options);
+    };
+    if (request.type == 'csgoempire') {
+        postToWebhook("<@" + username + ">, Send steam offer (CsgoEmpire)");
         var options =
         {
             title: 'CSGOEmpire Deposit',

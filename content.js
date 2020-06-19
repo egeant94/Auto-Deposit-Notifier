@@ -24,7 +24,7 @@ async function imready() //function that presses the Im ready button if it exist
 		if (btn[i].innerText.indexOf('Yes, I\'m Ready') > -1)  // If the button text is I'm Ready, Yes, I\'m Ready
 		{
 			console.log('Accepted one trade.'); // Print accepted one trade to the console
-			chrome.runtime.sendMessage({ type: 'notify', update: 1 }, function (response) {//send message to background.js, to send notification and webhook
+			chrome.runtime.sendMessage({ type: 'csgoempire', update: 1 }, function (response) {//send message to background.js, to send notification and webhook
 			});
 			await sleep(5000); //wait 5 seconds before pressing i'm ready
 			btn[i].click(); // Click button
@@ -35,7 +35,7 @@ async function imready() //function that presses the Im ready button if it exist
 		if (btn[i].innerText.indexOf('YES, I\'M READY') > -1)  // If the button text is I'm Ready, Yes, I\'m Ready
 		{
 			console.log('Accepted one trade.'); // Print accepted one trade to the console
-			chrome.runtime.sendMessage({ type: 'notify', update: 1 }, function (response) {//send message to background.js, to send notification and webhook
+			chrome.runtime.sendMessage({ type: 'rollbit', update: 1 }, function (response) {//send message to background.js, to send notification and webhook
 			});
 			await sleep(5000); //wait 5 seconds before pressing i'm ready
 			btn[i].click(); // Click button
