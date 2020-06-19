@@ -17,6 +17,8 @@ To get it, type \\@your-discord-name then hit enter, the numbers after the @ are
 That's it, you're good to go :)
 
 # Changelogs
+- Version 2.8.0
+  Defferencieted rollbit and csgoempire messages when notifying on discord.
 - Version 2.7.0
   Deposit notifier now also works on rollbit.
 - Version 2.6.0
