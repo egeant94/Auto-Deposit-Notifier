@@ -17,6 +17,8 @@ To get it, type \\@your-discord-name then hit enter, the numbers after the @ are
 That's it, you're good to go :)
 
 # Changelogs
+- Version 2.9.0
+  I've been reported that the discord notification wasn't always sent. I added retries on error to the request
 - Version 2.8.0
   Defferencieted rollbit and csgoempire messages when notifying on discord.
 - Version 2.7.0
