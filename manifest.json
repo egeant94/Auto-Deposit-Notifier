@@ -2,7 +2,7 @@
 	"manifest_version" : 2,
 	"name": "Auto Deposit Notifier",
 	"description": "On csgoempire.com, detects when someone buy your item, clicks ready and send notification + discord message.",
-	"version": "2.8.0",
+	"version": "2.9.0",
 	"content_scripts": [
 		{
 		  "matches": [

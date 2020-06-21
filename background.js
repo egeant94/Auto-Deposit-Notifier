@@ -5,6 +5,11 @@ var webhook_is_valid = true;
 
 refreshVars();
 
+function sleep(ms) //function that allows to stop the program for a given time
+{
+	return new Promise(resolve => setTimeout(resolve, ms));
+}
+
 function postToWebhook(content) {
     var xhr = new XMLHttpRequest();
     xhr.open('POST', webHookUrl, true);
@@ -16,12 +21,30 @@ function postToWebhook(content) {
 
     xhr.send(JSON.stringify(data));
 
-    xhr.onload = function (res) {
-        console.log('posted: ', res);
+    xhr.onload = async function (res) {
+		console.log('posted: ', res);
+		if (xhr.status != 200 && xhr.status != 204 && xhr.status != 201){
+			console.log('Error : ', xhr.status);
+			if (xhr.status == 429){
+				var retry_after = xhr.getResponseHeader("retry-after");
+				console.log('Response headers = ', retry_after);
+				await sleep(parseInt(retry_after) + 100);
+				postToWebhook(content);
+				console.log('Resent notification after ratelimit');
+			}
+			else {
+				await sleep(5000);
+				postToWebhook(content);
+				console.log('Resent notification');
+			};
+		};
     }
 
-    xhr.onerror = function (res) {
-        console.log('error posting: ', res);
+    xhr.onerror = async function (res) {
+		console.log('error posting: ', res);
+		await sleep(5000);
+		postToWebhook(content);
+		console.log('Resent the notification');
     }
 }
 
